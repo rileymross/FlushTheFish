@@ -15,7 +15,14 @@
     <center>
 
 <p>
-  
+	<p id="demo">Click here to:</p>
+  <button type="button" onclick="myFunction()">Flush The Fish!</button>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "FLUSHED!";
+}
+</script>
   <li class="dropdown">
       <a href="#" data-toggle="dropdown">The Fish's Clone Army<i class="icon-arrow"></i></a>
       <ul class="dropdown-menu">
