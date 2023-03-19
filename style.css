@@ -9,7 +9,7 @@
 
 .parallax {
   /* The image used */
-  background-image: url("img_parallax.jpg");
+  background-image: url("https://data.thetaedgestore.com/api/v2/data/0xb58decc650dc2b4e9a264793c813c08c168aa57314c7b890417dcad486890314");
 
   /* Set a specific height */
   min-height: 500px;
