@@ -28,7 +28,36 @@
         <li><a href="#">Lawrence Dagstine</a></li>
       </ul>
     </li>
-<script src="dropdown.js"></script>
+<script>
+var dropdown = document.querySelectorAll('.dropdown');
+var dropdownArray = Array.prototype.slice.call(dropdown,0);
+dropdownArray.forEach(function(el){
+	var button = el.querySelector('a[data-toggle="dropdown"]'),
+			menu = el.querySelector('.dropdown-menu'),
+			arrow = button.querySelector('i.icon-arrow');
+
+	button.onclick = function(event) {
+		if(!menu.hasClass('show')) {
+			menu.classList.add('show');
+			menu.classList.remove('hide');
+			arrow.classList.add('open');
+			arrow.classList.remove('close');
+			event.preventDefault();
+		}
+		else {
+			menu.classList.remove('show');
+			menu.classList.add('hide');
+			arrow.classList.remove('open');
+			arrow.classList.add('close');
+			event.preventDefault();
+		}
+	};
+})
+
+Element.prototype.hasClass = function(className) {
+    return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
+};
+</script>
   
 <h1><u>The case against <a href="https://www.youtube.com/c/level1online/">level1online</a>, <a href="https://www.youtube.com/c/messyvideogamenerd">8-Bit Eric</a>, <a href="https://www.youtube.com/c/RadicalReggie/">Radical Reggie</a>, <a href="https://www.youtube.com/c/OverThinkGaming/">OverThink Gaming</a>, <a href="https://www.youtube.com/c/TurboJoeOldSchoolGaming/">Turbo Joe</a>, and the rest of the "snakes"</u></h1>
 <ul><b><i>DISCLAIMER: This page exists in order to help people be able to live their lives without being harassed. Public information ahshas been posted for the sake of trying to stop the original doxxers from doing this to more people. If anyone has a request to have their information taken down from here and be made private, contact me on <a href="cel.ytpmv.com">YouTube</a> or <a href="mailto:dnkewd.stpka@simplelogin.com">E-mail</a> and I will take it down.</b></i></ul>
